@@ -87,13 +87,14 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     z-index: 2;
     flex-direction: column;
     align-self: center;
     height: calc(100vh - 50px); /* Убедитесь, что высота правильно рассчитывается */
     margin-top: -130px;
     margin-bottom: 70px;
+    position: relative;
+    min-height: 100vh;
 }
 
 .centered-text {
@@ -244,9 +245,8 @@ nav ul li a:hover {
 
 .decor-bubbles {
     position: absolute;
-    top:95%;
-    right: -285px;
-    transform: translateY(-50%);
+    bottom: 0;
+    right: 0;
     width: 285px;
     height: auto;
     z-index: 1;
@@ -257,11 +257,12 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 20px); /* Учитываем высоту header */
-    position: relative;
     z-index: 2;
     flex-direction: column;
     margin-bottom: -1; /* Добавляем */
     padding-bottom: -1; /* Добавляем */
+    position: relative;
+    min-height: 100vh;
 }
 
 .how-it-works {
@@ -892,6 +893,16 @@ nav ul li a:hover {
     .mobile-nav.active {
         display: block; /* Show mobile nav when active */
     }
+    .decor-bubbles {
+        width: 150px; /* Уменьшаем размер для мобильных устройств */
+    }
+
+    .decor-on-fire {
+        width: 150px;
+        top: 70%;
+        left: 20px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -924,8 +935,8 @@ nav ul li a:hover {
     body {
         background: linear-gradient(to right, 
             rgba(37, 99, 235, 0.2) 0%, 
-            rgba(255, 255, 255, 0.1) 25%, 
-            rgba(255, 255, 255, 0.1) 75%, 
+            rgba(255, 255, 255, 0.1) 30%, 
+            rgba(255, 255, 255, 0.1) 70%, 
             rgba(255, 99, 132, 0.2) 100%);
     }
 
@@ -938,16 +949,127 @@ nav ul li a:hover {
     }
 
     .linker {
-        display: none;
+        width: 100px; /* Уменьшаем размер для мобильных устройств */
+        height: auto;    }
+
+    .container {
+        padding: 20px 20px;
     }
+
+    .first-line {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 35px;
+        color: #000;
+        margin-bottom: 20px;
+        position: relative;
+        padding: auto;
+    }
+
+    .second-line {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        color: #000;
+    }
+
+    .linker {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 150px;
+        height: auto;
+        z-index: 0;
+    }
+    
+    .left {
+        left: 0;
+    }
+    
+    .right {
+        right: 0;
+    }
+
+    .additional-text {
+        margin-top: 65px;
+    }
+    
+    .first-line-additional {
+        padding-top: 20px;
+    }
+
+    .first-line-additional, .second-line-additional {
+        display: block;
+        margin-bottom: 10px;
+        margin: 0px 20px;
+    }
+
+    .seconf-line-additional {
+        margin-bottom: 25px;
+    }
+
+    .underline {
+        bottom: -25px;
+    }
+
+    .cta-button {
+        margin-top: 60px; /* Ещё больший отступ */
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+    
+    .stepper-image {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .step-text {
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    .step-image {
+        max-width: 80%;
+    }
+
+    .footer-container {
+        display: ruby-text;
+        justify-content: space-between;
+        max-width: 80%;
+    }
+
+    .footer-bottom {
+        display: ruby-text;
+        max-width: 80%;
+    }
+
+    .content {
+        display: ruby-text;
+        margin-top: 0px;
+    }
+
+    .centered-text {
+        margin-top: 40px;
+    }
+
 }
+
 
 @media (max-width: 480px) {
     body {
         background: linear-gradient(to right, 
             rgba(37, 99, 235, 0.2) 0%, 
-            rgba(255, 255, 255, 0.1) 15%, 
-            rgba(255, 255, 255, 0.1) 85%, 
+            rgba(255, 255, 255, 0.1) 25%, 
+            rgba(255, 255, 255, 0.1) 75%, 
             rgba(255, 99, 132, 0.2) 100%);
+    }
+    .decor-bubbles {
+        width: 150px; /* Уменьшаем размер для мобильных устройств */
+    }
+
+    .container {
+        padding: 20px 20px;
     }
 }
