@@ -837,6 +837,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-top: 40%;
 }
 
 .burger-icon span {
@@ -1052,7 +1053,7 @@ nav ul li a:hover {
     }
 
     .centered-text {
-        margin-top: 40px;
+        margin-top: 10%;
     }
 
 }
