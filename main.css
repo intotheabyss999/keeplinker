@@ -874,6 +874,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    width: max-content;
 }
 
 .mobile-nav ul li a:hover {
@@ -991,11 +992,11 @@ nav ul li a:hover {
     }
 
     .additional-text {
-        margin-top: 65px;
+        margin-top: 10%;
     }
     
     .first-line-additional {
-        padding-top: 20px;
+        padding-top: 10%;
     }
 
     .first-line-additional, .second-line-additional {
