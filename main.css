@@ -935,11 +935,17 @@ nav ul li a:hover {
     }
 
     body {
-        background: linear-gradient(to right, 
+        /* background: linear-gradient(to right, 
             rgba(37, 99, 235, 0.2) 0%, 
             rgba(255, 255, 255, 0.1) 30%, 
             rgba(255, 255, 255, 0.1) 70%, 
-            rgba(255, 99, 132, 0.2) 100%);
+            rgba(255, 99, 132, 0.2) 100%); */
+
+        background: linear-gradient(to right, 
+            rgba(37, 99, 235, 0.2) 0%, 
+            rgba(255, 255, 255, 0.1) 30%, 
+            rgba(255, 255, 255, 0.1) 100%);
+        overflow-x: hidden; /* Добавьте эту строку */
     }
 
     .desktop-nav {
@@ -955,7 +961,8 @@ nav ul li a:hover {
         height: auto;    }
 
     .container {
-        padding: 20px 20px;
+        padding: 10px 20px; /* Уменьшите вертикальный padding */
+
     }
 
     .first-line {
@@ -1049,14 +1056,23 @@ nav ul li a:hover {
 
     .content {
         display: ruby-text;
-        margin-top: 0px;
-    }
-
-    .centered-text {
         margin-top: 10%;
     }
 
+    .centered-text {
+        margin-top: 0; /* Уберите верхний отступ */
+    }
+
+    .signup-form {
+        margin: 10% 5%;
+    }
+
+    .social-btn img {
+        margin-top: 3%;
+    }
 }
+
+
 
 
 @media (max-width: 480px) {
