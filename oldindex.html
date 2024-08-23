@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keeplinker</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NK43XH6L1C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NK43XH6L1C');
+</script>
+<body>
+    <div class="main-container">
+        <header class="container">
+            <div class="logo-container">
+                <img src="img/logo.svg" alt="Keeplinker Logo" class="logo">
+                <span class="keeplinker">Keeplinker</span>
+            </div>
+            
+            <!-- Существующая навигация (будет скрыта на мобильных устройствах) -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li class="btn"><a href="/signin.html">Sign In</a></li>
+                    <li class="btn sign-up"><a href="/signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Новое бургер-меню (будет показано только на мобильных устройствах) -->
+            <div class="burger-menu">
+                <div class="burger-icon" onclick="toggleMobileNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="/signin.html">Sign In</a></li>
+                        <li><a href="/signup.html">Sign Up</a></li>
+                        <!-- Добавьте другие пункты меню при необходимости -->
+                    </ul>
+                </nav>
+            </div> 
+        </header>
+
+        <img src="img/left_linker.svg" alt="Left Linker" class="linker left">
+        <img src="img/right_linker.svg" alt="Right Linker" class="linker right">
+
+        <div class="content">
+            <div class="centered-text">
+                <span class="first-line">Easy and 
+                    <span class="blue-text">
+                        free
+                        <span class="emoji">
+                            <img src="img/surprised-emoji.svg" alt="Surprised Emoji">
+                        </span>
+                        <img src="img/pen-drawing.svg" alt="underline" class="underline">
+                    </span>
+                </span><br>
+                <span class="second-line">way to store your WEB links</span>
+            </div>
+        
+            <div class="additional-text">
+                <span class="first-line-additional">No need to keep dozens of links opened in the tabs of your browser! </span><br>
+                <span class="second-line-additional">Try an optimized way for your web browsing. Save web links according to the topics they belong to!</span>
+            </div>
+            
+            <div class="cta-button">
+                <a href="signup.html" class="cta-link">Let's try!</a>
+            </div>
+
+            <img src="img/on_fire.svg" alt="On Fire" class="decor-on-fire">
+        </div>
+        <img src="img/Bubbles.svg" alt="Bubbles" class="decor-bubbles">
+
+
+        <section class="how-it-works">
+            <h2 class="section-title">How it works?</h2>
+            <div class="stepper-container">
+                <img src="img/stepper.svg" alt="Stepper" class="stepper-image">
+            </div>
+            <div class="step-descriptions">
+                <div class="step">
+                    <p class="step-text">Create link collection according to your interests. It can be "Food", "AI", "Travel", or anything else!</p>
+                    <img src="img/understepper1.svg" alt="Step 1" class="step-image">
+                </div>
+                <div class="step">
+                    <p class="step-text">Add links to your collection, add name and description, so you won't forget what you've saved!</p>
+                    <img src="img/understepper2.svg" alt="Step 2" class="step-image">
+                </div>
+                <div class="step">
+                    <p class="step-text">Grab a cup of tea and enjoy going through saved links. Hopefully it helps you!</p>
+                    <img src="img/understepper3.svg" alt="Step 3" class="step-image">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo-section">
+                <div class="footer-logo-wrapper">
+                    <img src="img/logo.svg" alt="Keeplinker Logo" class="footer-logo">
+                    <span class="footer-keeplinker">KEEPLINKER</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">About</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h2>Join Our Newsletter</h2>
+                <p>Be the first to know about our latest updates, exclusive offers, and more.</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="img/twitter.svg" alt="Twitter"></a>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:hello@keeplinker.com"><img src="img/email.svg" alt="Email"> hello@keeplinker.com</a>
+            </div>
+            <div class="footer-legal">
+                <a href="#">English</a>
+                <a href="#">Privacy</a>
+                <a href="#">Legal</a>
+            </div>
+            <div class="footer-copyright">
+                © 2024 Keeplinker. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #2563EB;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(to right, rgba(37, 99, 235, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 99, 132, 0.2) 100%);
+    width: 100%;
+}
+
+.container-fluid {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1300px; /* Максимальная ширина, которая вам нужна */
+}
+
+.navbar {
+    background-color: transparent !important;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2563EB;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.logo {
+    width: 32px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.nav-item .nav-link {
+    font-size: 16px;
+    color: #2563EB;
+    padding: 0.5rem 1rem;
+}
+
+.nav-item .btn {
+    font-weight: 700;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem; /* Match padding with Let's try button */
+}
+
+.nav-item .sign-in {
+    background-color: transparent;
+    color: #2563EB;
+    border-radius: 0.5rem; /* Match with Let's try button */
+}
+
+.nav-item .sign-up {
+    background-color: #2563EB;
+    color: #fff !important; /* Ensure text is white */
+    border-radius: 0.5rem; /* Match with Let's try button */
+    border: none;
+}
+
+.content {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(85vh - 56px); /* Subtract the navbar height */
+    padding-top: 0.8rem; /* Reduced top padding */
+    padding-bottom: 1rem;
+}
+
+.first-line, .second-line {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 3.75rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.blue-text {
+    color: #2563EB;
+    position: relative;
+}
+
+.emoji img {
+    position: absolute;
+    top: -0.6em;
+    right: -0.02em; /* Reduced right margin for correct positioning */
+    width: 1em;
+    height: auto;
+    transform: translateX(50%); /* Adjusted image alignment */
+}
+
+.underline {
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info-line {
+    font-size: 1.25rem;
+    color: #6B7280;
+    line-height: 1.5;
+    margin-bottom: 0.25rem; /* Reduced spacing between text blocks */
+}
+
+.info-line + .info-line {
+    margin-top: 0.25rem !important;
+}
+
+.first-line-additional, .second-line-additional {
+    font-size: 1.25rem;
+    color: #6B7280;
+    margin-bottom: 1rem;
+}
+
+.cta-button-container {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.cta-link {
+    display: inline-block;
+    padding: 15px 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2563EB;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-link::before,
+  .cta-link::after,
+  .cta-link span::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid #2563EB;
+    border-radius: 7px;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .cta-link::before {
+    animation: wave 2s infinite;
+  }
+  
+  .cta-link::after {
+    animation: wave 2s infinite 2s;
+  }
+  
+  .cta-link span::before {
+    animation: wave 2s infinite 1.2s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .cta-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  .cta-link:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(37, 99, 235, 0.2);
+  }
+
+/* @keyframes press {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+} */
+
+.decor-on-fire {
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    top: 80%; /* Adjust this value to vertically align the image with the button */
+    width: 230px; /* Adjust width as needed */
+}
+
+.decor-bubbles {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    line-height: 0;
+}
+
+.decor-bubbles img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.how-it-works {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 5vw; /* Adjust this value as needed */
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 3rem;
+}
+
+.step-descriptions {
+    display: flex;
+    align-items: flex-start;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 100%; /* Ensure all steps have the same height */
+}
+
+.step-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.step-text {
+    font-size: 1.25rem;
+    color: #6B7280;
+    text-align: center;
+    flex-grow: 1; /* Allow text to expand and fill available space */
+    display: flex;
+    align-items: center; /* Center text vertically */
+}
+
+.footer-container {
+    padding: 0 30px; /* Те же отступы, что и у header */
+    background: none;
+    display: flex;
+    justify-content: center; /* Центрирует блок футера по горизонтали */
+    align-items: center; /* Центрирует блок футера по вертикали */
+    padding-bottom: 1rem; /* Отступ снизу */
+}
+
+.footer {
+    background: #f8f9fa;
+    color: #212529;
+    padding: 1.5rem 1rem; /* Добавим побольше отступов для мобильных устройств */
+    border-radius: 15px; /* Закругленные углы */
+    width: 100%;
+    max-width: 1200px; /* Ограничим ширину футера для центрирования */
+    margin: 0 auto; /* Центрирование футера */
+    margin-top: 0.5rem; /* Добавим отступ сверху */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Добавим тень для лучшего выделения */
+}
+
+.footer-wrapper {
+  
+        display: flex;
+        justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); /* Легкий градиент */
+}
+
+
+.footer-top,
+.footer-bottom {
+    padding: 1.5rem 1rem;
+}
+
+.footer-bottom {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none; /* Унаследуем фон страницы */
+    z-index: -1; /* Разместим ниже всех элементов */
+}
+
+
+.footer-logo img {
+    width: 40px;
+}
+
+.footer-brand {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #2563EB;
+    font-family: 'Montserrat Subrayada';
+    padding-left: 10px;
+}
+
+.footer-links a {
+    color: #2563EB;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-newsletter-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2563EB;
+    margin-bottom: 0.5rem;
+}
+
+.footer form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer form .form-control {
+    flex-grow: 1;
+    border-radius: 0.25rem;
+}
+
+.footer form .btn {
+    background-color: #2563EB;
+    border-color: #2563EB;
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #dee2e6;
+    margin-top: 2rem;
+}
+
+.footer-bottom .col-md-4 {
+    margin-top: 1rem;
+}
+
+.footer-contact {
+    color: #2563EB;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer-contact:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom a {
+    color: #2563EB;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom img {
+    width: 24px;
+}
+
+.footer-copyright {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 1rem;
+}
+
+.linker {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 285px;
+    height: auto;
+    z-index: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 34px;
+    }
+
+    .first-line, .second-line {
+        font-size: 2.5rem !important;
+    }
+
+    .blue-text {
+        font-size: 2.5rem !important;
+    }
+
+    .first-line-additional, .second-line-additional {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .step-text {
+        font-size: 1rem;
+    }
+
+    .footer-keeplinker {
+        font-size: 20px;
+    }
+
+    .navbar-nav .nav-link.btn {
+        margin-right: 0; /* Убираем правый отступ */
+    }
+    
+    .cta-link {
+        margin: 0 auto; /* Центрируем кнопку */
+    }
+}
+
+.keeplinker {
+    color: #2563EB;
+    font-size: 40px;
+}
+
+@media (max-width: 767px) {
+    .keeplinker {
+        font-size: 34px; /* Adjusted font size for mobile */
+       line-height: 34px;
+    }
+    .navbar {
+        flex-wrap: nowrap;
+      }
+      
+      .navbar-brand {
+        flex-grow: 1;
+      }
+      
+      .navbar-toggler {
+        order: 1;
+      }
+      
+      .navbar-collapse {
+        position: absolute;
+        top: 100%; /* Position below the navbar */
+        left: 0;
+        right: 0;
+        background-color: transparent; /* Or your preferred background */
+        z-index: 1000;
+        transition: height 0.3s ease;
+      }
+    
+      .navbar-nav .nav-item .nav-link.btn {
+        background-color: transparent;
+        color: #2563EB;
+      }
+    
+      .navbar-nav .nav-item .nav-link.btn.sign-up {
+        background-color: #2563EB;
+        color: #FFFFFF;
+      }
+
+
+      .nav-item .sign-in {
+        background-color: transparent !important;
+       }
+
+    .container-fluid {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .navbar-nav .nav-link {
+        padding-right: 14px;
+    }
+
+    .first-line, .second-line, .info-line, .cta-link, .footer-links a {
+        padding-right: 14px;
+        box-sizing: border-box; /* Ensure padding is included in the total width */
+    }
+    
+    .decor-bubbles {
+        width: 45%;
+        right: -14px; /* Compensate for the container padding */
+    }
+    
+    .how-it-works {
+        margin-top: 30vw; /* Increase for mobile to ensure it's below the bubbles */
+    }
+
+    .footer-container {
+            padding: 0 20px; /* Уменьшенные отступы на мобильных устройствах */
+    }
+
+    .footer {
+        padding: 1rem;
+        margin-top: 1rem; /* Уменьшим отступ сверху */
+    }
+
+    .footer-top {
+        padding: 1rem 0;
+    }
+
+    .footer-bottom {
+        padding: 0.5rem 0;
+    }
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column; /* Элементы будут располагаться в колонку */
+        align-items: center; /* Центрирует элементы по горизонтали */
+        text-align: center; /* Центрирует текст внутри элементов */
+        padding: 20px; /* Отступы для футера */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row; /* Упорядочиваем ссылки в колонку */
+        align-items: center; /* Центрируем ссылки */
+    }
+    
+    .footer-logo, 
+    .footer-links, 
+    .footer-newsletter {
+        width: 100%; /* Элементы занимают всю ширину */
+        margin-bottom: 15px; /* Отступы между элементами */
+    }
+
+    .footer-links a {
+        margin: 5px 0; /* Отступы между ссылками */
+        text-align: center; /* Центрирует текст ссылок */
+    }
+
+    .footer-newsletter {
+        margin-bottom: 15px; /* Отступ под блоком подписки на новости */
+    }
+}
+
+.nav-link.btn {
+    margin-right: 30px; /* Added right margin for all buttons */
+}
+
+.nav-link.btn.sign-in {
+    color: #2563EB; /* Set the text color for the Sign In button */
+}
+
+.navbar-toggler {
+    border: 2px solid #2563EB !important; /* Force the border color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.blue-text {
+    font-size: 3.75rem;
+    display: inline-block; /* Added to ensure proper block-level behavior */
+}
+
+img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto;
+}
+
+.how-it-works {
+    padding: 1rem; /* Reduced padding for mobile */
+}
+
+.additional-info, .step-descriptions, .cta-button-container {
+    flex-wrap: wrap; /* Ensures flex containers wrap on small screens */
+}
+
+.decor-on-fire {
+    max-width: 50%; /* Reduced size for mobile */
+    left: 20%; /* Centered */
+}
+
+.linker {
+    width: 150px; 
+}
+
+
+@media (min-width: 768px) {
+    .linker {
+        width: 285px; /* Restored original size for desktop */
+    }
+       .step-descriptions {
+        margin-top: 2rem; /* Add some space between the stepper image and descriptions */
+    }
+    
+    .step {
+        padding: 0 15px; /* Add some horizontal padding between steps */
+    }
+
+    .footer-top {
+        padding-bottom: 2rem; /* Extra space between top and bottom sections */
+    }
+
+    .footer-bottom {
+        padding-top: 1rem;
+    }
+
+    .footer-legal {
+        text-align: right;
+    }
+}
