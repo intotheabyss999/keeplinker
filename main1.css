@@ -25,6 +25,7 @@ body {
 .navbar {
     background-color: transparent !important;
     padding: 1rem 0;
+    z-index: 1030;
 }
 
 .navbar-brand {
@@ -76,6 +77,8 @@ body {
     min-height: calc(85vh - 56px); /* Subtract the navbar height */
     padding-top: 0.8rem; /* Reduced top padding */
     padding-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .first-line, .second-line {
@@ -147,7 +150,7 @@ body {
     color: #fff;
     background-color: #2563EB;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     overflow: visible;
     z-index: 1;
@@ -163,7 +166,7 @@ body {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    border: 2px solid #2563EB;
+    border: 0px solid #2563EB;
     border-radius: 7px;
     opacity: 0;
     z-index: -1;
@@ -171,6 +174,7 @@ body {
   
   .cta-link::before {
     animation: wave 2s infinite;
+    background-color: cornflowerblue;
   }
   
   .cta-link::after {
@@ -514,12 +518,31 @@ body::before {
       
       .navbar-collapse {
         position: absolute;
-        top: 100%; /* Position below the navbar */
+        top: 100%;
         left: 0;
         right: 0;
-        background-color: transparent; /* Or your preferred background */
-        z-index: 1000;
-        transition: height 0.3s ease;
+        background-color: transparent; /* или любой другой цвет фона */
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+      }
+    
+      .navbar-collapse.collapsing {
+        height: auto;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+    
+      .navbar-collapse.show {
+        height: auto;
+      }
+    
+      .content {
+        transition: transform 0.3s ease;
+      }
+    
+      body.menu-open .content {
+        transform: translateY(80px); /* Adjust this value based on your menu height */
       }
     
       .navbar-nav .nav-item .nav-link.btn {
