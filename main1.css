@@ -426,7 +426,7 @@ body::before {
 }
 
 .linker {
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 285px;
@@ -441,6 +441,7 @@ body::before {
 .right {
     right: 0;
 }
+
 
 .flex-container {
     display: flex;
@@ -560,11 +561,11 @@ body::before {
         background-color: transparent !important;
        }
 
-    .container-fluid {
-        padding-right: 14px;
-        padding-left: 14px;
+       .container-fluid {
+        padding-right: 15px; /* Reduce padding on smaller screens */
+        padding-left: 15px; /* Reduce padding on smaller screens */
+        max-width: 100%; /* Ensure it doesn’t exceed viewport width */
     }
-
     .navbar-nav .nav-link {
         padding-right: 14px;
     }
@@ -697,4 +698,8 @@ img {
     .footer-legal {
         text-align: right;
     }
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
